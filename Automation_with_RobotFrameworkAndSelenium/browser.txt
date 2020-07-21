@@ -1,0 +1,21 @@
+***Settings***
+Library		    Selenium2Library
+Suite Setup     Go to Google
+
+
+***Test Cases***
+Ensure the capital of country is displayed
+    Search and check        France              Paris
+    Search and check        Ukraine             Kyiv
+    Search and check        The Netherland      sdkfj
+
+
+
+***Keywords***
+Go to Google
+    Open Browser        https://www.google.com      chrome
+
+Search and check
+    [Arguments]     ${query}    ${expected_result}
+    Input text      //input[@class="gLFyf gsfi"]        ${query}
+    Click Button

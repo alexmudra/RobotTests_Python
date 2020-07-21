@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20200717 18:45:06.329" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/alex/PycharmProjects/Automation_with_RobotFrameworkAndSelenium/browser.txt" id="s1" name="Browser">
+<kw type="setup" name="Go to Google">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200717 18:45:06.570" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20200717 18:45:10.092" starttime="20200717 18:45:06.569"></status>
+</kw>
+<status status="PASS" endtime="20200717 18:45:10.092" starttime="20200717 18:45:06.569"></status>
+</kw>
+<test id="s1-t1" name="Ensure the capital of country is displayed">
+<kw name="Search and check">
+<arguments>
+<arg>France</arg>
+<arg>Paris</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gLFyf gsfi"]</arg>
+<arg>${query}</arg>
+</arguments>
+<msg timestamp="20200717 18:45:10.095" level="INFO">Typing text 'France' into text field '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" endtime="20200717 18:45:10.263" starttime="20200717 18:45:10.094"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gNO89b"]</arg>
+</arguments>
+<msg timestamp="20200717 18:45:10.264" level="INFO">Clicking button '//input[@class="gNO89b"]'.</msg>
+<status status="PASS" endtime="20200717 18:45:11.579" starttime="20200717 18:45:10.264"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${expected_result}</arg>
+</arguments>
+<status status="PASS" endtime="20200717 18:45:11.601" starttime="20200717 18:45:11.580"></status>
+</kw>
+<status status="PASS" endtime="20200717 18:45:11.601" starttime="20200717 18:45:10.094"></status>
+</kw>
+<kw name="Search and check">
+<arguments>
+<arg>Ukraine</arg>
+<arg>Kyiv</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gLFyf gsfi"]</arg>
+<arg>${query}</arg>
+</arguments>
+<msg timestamp="20200717 18:45:11.602" level="INFO">Typing text 'Ukraine' into text field '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" endtime="20200717 18:45:11.741" starttime="20200717 18:45:11.602"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gNO89b"]</arg>
+</arguments>
+<msg timestamp="20200717 18:45:11.742" level="INFO">Clicking button '//input[@class="gNO89b"]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200717 18:45:11.958" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200717 18:45:11.958" starttime="20200717 18:45:11.762"></status>
+</kw>
+<msg timestamp="20200717 18:45:11.962" level="FAIL">Button with locator '//input[@class="gNO89b"]' not found.</msg>
+<status status="FAIL" endtime="20200717 18:45:11.962" starttime="20200717 18:45:11.741"></status>
+</kw>
+<status status="FAIL" endtime="20200717 18:45:11.963" starttime="20200717 18:45:11.602"></status>
+</kw>
+<status status="FAIL" endtime="20200717 18:45:11.963" critical="yes" starttime="20200717 18:45:10.093">Button with locator '//input[@class="gNO89b"]' not found.</status>
+</test>
+<status status="FAIL" endtime="20200717 18:45:11.964" starttime="20200717 18:45:06.330"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Browser" pass="0">Browser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
