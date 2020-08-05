@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20200717 18:45:06.329" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<robot generated="20200805 18:52:46.424" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
 <suite source="/home/alex/PycharmProjects/Automation_with_RobotFrameworkAndSelenium/browser.txt" id="s1" name="Browser">
 <kw type="setup" name="Go to Google">
 <kw name="Open Browser" library="Selenium2Library">
@@ -8,16 +8,16 @@
 <arg>https://www.google.com</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200717 18:45:06.570" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
-<status status="PASS" endtime="20200717 18:45:10.092" starttime="20200717 18:45:06.569"></status>
+<msg timestamp="20200805 18:52:46.526" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20200805 18:52:49.433" starttime="20200805 18:52:46.526"></status>
 </kw>
-<status status="PASS" endtime="20200717 18:45:10.092" starttime="20200717 18:45:06.569"></status>
+<status status="PASS" endtime="20200805 18:52:49.433" starttime="20200805 18:52:46.525"></status>
 </kw>
 <test id="s1-t1" name="Ensure the capital of country is displayed">
 <kw name="Search and check">
 <arguments>
 <arg>France</arg>
-<arg>Paris</arg>
+<arg>France</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -25,30 +25,37 @@
 <arg>//input[@class="gLFyf gsfi"]</arg>
 <arg>${query}</arg>
 </arguments>
-<msg timestamp="20200717 18:45:10.095" level="INFO">Typing text 'France' into text field '//input[@class="gLFyf gsfi"]'.</msg>
-<status status="PASS" endtime="20200717 18:45:10.263" starttime="20200717 18:45:10.094"></status>
+<msg timestamp="20200805 18:52:49.436" level="INFO">Typing text 'France' into text field '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" endtime="20200805 18:52:49.543" starttime="20200805 18:52:49.435"></status>
 </kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
-<arg>//input[@class="gNO89b"]</arg>
+<arg>5seconds</arg>
 </arguments>
-<msg timestamp="20200717 18:45:10.264" level="INFO">Clicking button '//input[@class="gNO89b"]'.</msg>
-<status status="PASS" endtime="20200717 18:45:11.579" starttime="20200717 18:45:10.264"></status>
+<status status="PASS" endtime="20200805 18:52:49.544" starttime="20200805 18:52:49.543"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@value,"Пошук Google") or @class="Tg7LZd"]</arg>
+</arguments>
+<msg timestamp="20200805 18:52:49.545" level="INFO">Clicking element '//*[contains(@value,"Пошук Google") or @class="Tg7LZd"]'.</msg>
+<status status="PASS" endtime="20200805 18:52:50.833" starttime="20200805 18:52:49.544"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>${expected_result}</arg>
 </arguments>
-<status status="PASS" endtime="20200717 18:45:11.601" starttime="20200717 18:45:11.580"></status>
+<status status="PASS" endtime="20200805 18:52:50.858" starttime="20200805 18:52:50.833"></status>
 </kw>
-<status status="PASS" endtime="20200717 18:45:11.601" starttime="20200717 18:45:10.094"></status>
+<status status="PASS" endtime="20200805 18:52:50.859" starttime="20200805 18:52:49.435"></status>
 </kw>
 <kw name="Search and check">
 <arguments>
-<arg>Ukraine</arg>
-<arg>Kyiv</arg>
+<arg>USA</arg>
+<arg>USA</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -56,38 +63,84 @@
 <arg>//input[@class="gLFyf gsfi"]</arg>
 <arg>${query}</arg>
 </arguments>
-<msg timestamp="20200717 18:45:11.602" level="INFO">Typing text 'Ukraine' into text field '//input[@class="gLFyf gsfi"]'.</msg>
-<status status="PASS" endtime="20200717 18:45:11.741" starttime="20200717 18:45:11.602"></status>
+<msg timestamp="20200805 18:52:50.859" level="INFO">Typing text 'USA' into text field '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" endtime="20200805 18:52:50.951" starttime="20200805 18:52:50.859"></status>
 </kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
-<arg>//input[@class="gNO89b"]</arg>
+<arg>5seconds</arg>
 </arguments>
-<msg timestamp="20200717 18:45:11.742" level="INFO">Clicking button '//input[@class="gNO89b"]'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20200717 18:45:11.958" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20200717 18:45:11.958" starttime="20200717 18:45:11.762"></status>
+<status status="PASS" endtime="20200805 18:52:50.952" starttime="20200805 18:52:50.951"></status>
 </kw>
-<msg timestamp="20200717 18:45:11.962" level="FAIL">Button with locator '//input[@class="gNO89b"]' not found.</msg>
-<status status="FAIL" endtime="20200717 18:45:11.962" starttime="20200717 18:45:11.741"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@value,"Пошук Google") or @class="Tg7LZd"]</arg>
+</arguments>
+<msg timestamp="20200805 18:52:50.953" level="INFO">Clicking element '//*[contains(@value,"Пошук Google") or @class="Tg7LZd"]'.</msg>
+<status status="PASS" endtime="20200805 18:52:52.202" starttime="20200805 18:52:50.952"></status>
 </kw>
-<status status="FAIL" endtime="20200717 18:45:11.963" starttime="20200717 18:45:11.602"></status>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${expected_result}</arg>
+</arguments>
+<status status="PASS" endtime="20200805 18:52:52.223" starttime="20200805 18:52:52.202"></status>
 </kw>
-<status status="FAIL" endtime="20200717 18:45:11.963" critical="yes" starttime="20200717 18:45:10.093">Button with locator '//input[@class="gNO89b"]' not found.</status>
+<status status="PASS" endtime="20200805 18:52:52.223" starttime="20200805 18:52:50.859"></status>
+</kw>
+<kw name="Search and check">
+<arguments>
+<arg>The Netherland</arg>
+<arg>Netherland</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class="gLFyf gsfi"]</arg>
+<arg>${query}</arg>
+</arguments>
+<msg timestamp="20200805 18:52:52.224" level="INFO">Typing text 'The Netherland' into text field '//input[@class="gLFyf gsfi"]'.</msg>
+<status status="PASS" endtime="20200805 18:52:52.432" starttime="20200805 18:52:52.223"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200805 18:52:52.434" starttime="20200805 18:52:52.433"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@value,"Пошук Google") or @class="Tg7LZd"]</arg>
+</arguments>
+<msg timestamp="20200805 18:52:52.434" level="INFO">Clicking element '//*[contains(@value,"Пошук Google") or @class="Tg7LZd"]'.</msg>
+<status status="PASS" endtime="20200805 18:52:53.334" starttime="20200805 18:52:52.434"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${expected_result}</arg>
+</arguments>
+<status status="PASS" endtime="20200805 18:52:53.373" starttime="20200805 18:52:53.334"></status>
+</kw>
+<status status="PASS" endtime="20200805 18:52:53.373" starttime="20200805 18:52:52.223"></status>
+</kw>
+<status status="PASS" endtime="20200805 18:52:53.374" critical="yes" starttime="20200805 18:52:49.433"></status>
 </test>
-<status status="FAIL" endtime="20200717 18:45:11.964" starttime="20200717 18:45:06.330"></status>
+<status status="PASS" endtime="20200805 18:52:53.374" starttime="20200805 18:52:46.425"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Browser" pass="0">Browser</stat>
+<stat fail="0" id="s1" name="Browser" pass="1">Browser</stat>
 </suite>
 </statistics>
 <errors>

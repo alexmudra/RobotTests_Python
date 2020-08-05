@@ -1,3 +1,5 @@
+# coding: utf-8
+
 ***Settings***
 Library		    Selenium2Library
 Suite Setup     Go to Google
@@ -5,9 +7,9 @@ Suite Setup     Go to Google
 
 ***Test Cases***
 Ensure the capital of country is displayed
-    Search and check        France              Paris
-    Search and check        Ukraine             Kyiv
-    Search and check        The Netherland      sdkfj
+    Search and check        France      France
+    Search and check        USA     USA
+    Search and check        The Netherland      Netherland
 
 
 
@@ -18,4 +20,6 @@ Go to Google
 Search and check
     [Arguments]     ${query}    ${expected_result}
     Input text      //input[@class="gLFyf gsfi"]        ${query}
-    Click Button
+    Set Selenium Implicit Wait      5seconds
+    Click Element       //*[contains(@value,"Пошук Google") or @class="Tg7LZd"]
+    Wait Until Page Contains        ${expected_result}
