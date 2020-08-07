@@ -24,3 +24,4 @@ loginToApplication
     Input Text  id:loginform-password  ustudiotesti.ng@gmail.com
     Click Button    xpath=//button[@class="mk-btn mk-btn_accept"]
 
+#наступне відео подивитися на youtube.com/watch?v=srH9wZZOL_M&list=PLUDwpEzHYYLsCHiiihnwl3L0xPspL7BPG&index=3
