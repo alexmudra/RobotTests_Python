@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20200807 20:09:43.892" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/alex/PycharmProjects/Exp_in_SDET_QA_Autom_Tech/TC1.robot" id="s1" name="TC1">
+<test id="s1-t1" name="LoginTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://eauction-dev.byustudio.in.ua/login</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200807 20:09:44.005" level="INFO">Opening browser 'chrome' to base url 'http://eauction-dev.byustudio.in.ua/login'.</msg>
+<status status="PASS" endtime="20200807 20:09:46.710" starttime="20200807 20:09:44.004"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id="loginform-username"]</arg>
+</arguments>
+<msg timestamp="20200807 20:09:46.711" level="INFO">Clicking element 'xpath=//input[@id="loginform-username"]'.</msg>
+<status status="PASS" endtime="20200807 20:09:46.795" starttime="20200807 20:09:46.710"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginform-username</arg>
+<arg>ustudiotesti.ng@gmail.com</arg>
+</arguments>
+<msg timestamp="20200807 20:09:46.796" level="INFO">Typing text 'ustudiotesti.ng@gmail.com' into text field 'id:loginform-username'.</msg>
+<status status="PASS" endtime="20200807 20:09:46.951" starttime="20200807 20:09:46.796"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id="loginform-password"]</arg>
+</arguments>
+<msg timestamp="20200807 20:09:46.951" level="INFO">Clicking element 'xpath=//input[@id="loginform-password"]'.</msg>
+<status status="PASS" endtime="20200807 20:09:47.036" starttime="20200807 20:09:46.951"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginform-password</arg>
+<arg>ustudiotesti.ng@gmail.com</arg>
+</arguments>
+<msg timestamp="20200807 20:09:47.036" level="INFO">Typing text 'ustudiotesti.ng@gmail.com' into text field 'id:loginform-password'.</msg>
+<status status="PASS" endtime="20200807 20:09:47.168" starttime="20200807 20:09:47.036"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class="mk-btn mk-btn_accept"]</arg>
+</arguments>
+<msg timestamp="20200807 20:09:47.169" level="INFO">Clicking button 'xpath=//button[@class="mk-btn mk-btn_accept"]'.</msg>
+<status status="PASS" endtime="20200807 20:09:47.253" starttime="20200807 20:09:47.169"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200807 20:09:47.318" starttime="20200807 20:09:47.253"></status>
+</kw>
+<status status="PASS" endtime="20200807 20:09:47.319" critical="yes" starttime="20200807 20:09:44.004"></status>
+</test>
+<status status="PASS" endtime="20200807 20:09:47.320" starttime="20200807 20:09:43.893"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TC1" pass="1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
