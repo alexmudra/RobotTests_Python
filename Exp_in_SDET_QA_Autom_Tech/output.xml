@@ -1,65 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20200807 20:09:43.892" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
-<suite source="/home/alex/PycharmProjects/Exp_in_SDET_QA_Autom_Tech/TC1.robot" id="s1" name="TC1">
-<test id="s1-t1" name="LoginTest">
+<robot generated="20200811 20:36:49.663" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/alex/PycharmProjects/Exp_in_SDET_QA_Autom_Tech/Dropdowns.robot" id="s1" name="Dropdowns">
+<test id="s1-t1" name="HandlingDropDowndsAndLists">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>http://eauction-dev.byustudio.in.ua/login</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200807 20:09:44.005" level="INFO">Opening browser 'chrome' to base url 'http://eauction-dev.byustudio.in.ua/login'.</msg>
-<status status="PASS" endtime="20200807 20:09:46.710" starttime="20200807 20:09:44.004"></status>
+<msg timestamp="20200811 20:36:49.782" level="INFO">Opening browser 'chrome' to base url 'http://www.practiceselenium.com/practice-form.html'.</msg>
+<status status="PASS" endtime="20200811 20:37:02.472" starttime="20200811 20:36:49.782"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>xpath=//input[@id="loginform-username"]</arg>
+<arg>1seconds</arg>
 </arguments>
-<msg timestamp="20200807 20:09:46.711" level="INFO">Clicking element 'xpath=//input[@id="loginform-username"]'.</msg>
-<status status="PASS" endtime="20200807 20:09:46.795" starttime="20200807 20:09:46.710"></status>
+<status status="PASS" endtime="20200811 20:37:02.474" starttime="20200811 20:37:02.473"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>id:loginform-username</arg>
-<arg>ustudiotesti.ng@gmail.com</arg>
+<arg>continents</arg>
+<arg>Australia</arg>
 </arguments>
-<msg timestamp="20200807 20:09:46.796" level="INFO">Typing text 'ustudiotesti.ng@gmail.com' into text field 'id:loginform-username'.</msg>
-<status status="PASS" endtime="20200807 20:09:46.951" starttime="20200807 20:09:46.796"></status>
+<msg timestamp="20200811 20:37:02.476" level="INFO">Selecting options from selection list 'continents' by label Australia.</msg>
+<status status="PASS" endtime="20200811 20:37:08.687" starttime="20200811 20:37:02.475"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
 <arguments>
-<arg>xpath=//input[@id="loginform-password"]</arg>
+<arg>continents</arg>
+<arg>5</arg>
 </arguments>
-<msg timestamp="20200807 20:09:46.951" level="INFO">Clicking element 'xpath=//input[@id="loginform-password"]'.</msg>
-<status status="PASS" endtime="20200807 20:09:47.036" starttime="20200807 20:09:46.951"></status>
+<msg timestamp="20200811 20:37:08.687" level="INFO">Selecting options from selection list 'continents' by index 5.</msg>
+<status status="PASS" endtime="20200811 20:37:20.923" starttime="20200811 20:37:08.687"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>id:loginform-password</arg>
-<arg>ustudiotesti.ng@gmail.com</arg>
+<arg>selenium_commands</arg>
+<arg>Switch Commands</arg>
 </arguments>
-<msg timestamp="20200807 20:09:47.036" level="INFO">Typing text 'ustudiotesti.ng@gmail.com' into text field 'id:loginform-password'.</msg>
-<status status="PASS" endtime="20200807 20:09:47.168" starttime="20200807 20:09:47.036"></status>
+<msg timestamp="20200811 20:37:20.924" level="INFO">Selecting options from selection list 'selenium_commands' by label Switch Commands.</msg>
+<status status="PASS" endtime="20200811 20:37:27.086" starttime="20200811 20:37:20.923"></status>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>xpath=//button[@class="mk-btn mk-btn_accept"]</arg>
+<arg>selenium_commands</arg>
+<arg>WebElement Commands</arg>
 </arguments>
-<msg timestamp="20200807 20:09:47.169" level="INFO">Clicking button 'xpath=//button[@class="mk-btn mk-btn_accept"]'.</msg>
-<status status="PASS" endtime="20200807 20:09:47.253" starttime="20200807 20:09:47.169"></status>
+<msg timestamp="20200811 20:37:27.088" level="INFO">Selecting options from selection list 'selenium_commands' by label WebElement Commands.</msg>
+<status status="PASS" endtime="20200811 20:37:33.286" starttime="20200811 20:37:27.087"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>selenium_commands</arg>
+<arg>Navigation Commands</arg>
+</arguments>
+<msg timestamp="20200811 20:37:33.287" level="INFO">Selecting options from selection list 'selenium_commands' by label Navigation Commands.</msg>
+<status status="PASS" endtime="20200811 20:37:39.481" starttime="20200811 20:37:33.286"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>selenium_commands</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20200811 20:37:39.482" level="INFO">Selecting options from selection list 'selenium_commands' by index 0.</msg>
+<status status="PASS" endtime="20200811 20:37:46.693" starttime="20200811 20:37:39.481"></status>
+</kw>
+<kw name="Unselect From List By Label" library="SeleniumLibrary">
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>selenium_commands</arg>
+<arg>WebElement Commands</arg>
+</arguments>
+<msg timestamp="20200811 20:37:46.695" level="INFO">Un-selecting options from selection list 'selenium_commands' by label WebElement Commands.</msg>
+<status status="PASS" endtime="20200811 20:37:52.830" starttime="20200811 20:37:46.694"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20200807 20:09:47.318" starttime="20200807 20:09:47.253"></status>
+<status status="PASS" endtime="20200811 20:37:53.901" starttime="20200811 20:37:52.831"></status>
 </kw>
-<status status="PASS" endtime="20200807 20:09:47.319" critical="yes" starttime="20200807 20:09:44.004"></status>
+<status status="PASS" endtime="20200811 20:37:53.902" critical="yes" starttime="20200811 20:36:49.781"></status>
 </test>
-<status status="PASS" endtime="20200807 20:09:47.320" starttime="20200807 20:09:43.893"></status>
+<status status="PASS" endtime="20200811 20:37:53.904" starttime="20200811 20:36:49.664"></status>
 </suite>
 <statistics>
 <total>
@@ -69,7 +97,7 @@
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="TC1" pass="1">TC1</stat>
+<stat fail="0" id="s1" name="Dropdowns" pass="1">Dropdowns</stat>
 </suite>
 </statistics>
 <errors>
