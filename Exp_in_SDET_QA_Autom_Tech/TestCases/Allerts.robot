@@ -1,4 +1,5 @@
 #ресурс де можна перевіряти алерти http://testautomationpractice.blogspot.com/
+#https://www.youtube.com/watch?v=qAB11ABeezw&list=PLUDwpEzHYYLsCHiiihnwl3L0xPspL7BPG&index=8 lesson 8
 
 *** Settings ***
 Library  SeleniumLibrary
