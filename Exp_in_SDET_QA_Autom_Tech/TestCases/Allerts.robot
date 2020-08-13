@@ -20,4 +20,7 @@ HandlingAllerts
     #handle alert    dismiss
 
     #для того щоб залишити алерт-вікно(ніби клікнути ок) треба використати наступний кейворд
-    handle alert    leave
+    #handle alert    leave
+
+    alert should be present  Press a button!  #перевіряє текст в алерті
+    alert should not be present  Press a button3211351!  #перевіряє відсутність тексту в алерті
