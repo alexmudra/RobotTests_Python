@@ -13,11 +13,17 @@ ${email}    organiz_neobrob_wood_stage@byustudio.in.ua
 ${pass}    organiz_neobrob_wood_stage@byustudio.in.ua
 
 *** Test Cases ***
-RegistrationTest
-#    ${speed}=   Get Selenium Speed
-#    Log To Console  ${speed}    #виводимо значення швидкості селеніума на екран (дефолтно значення буде 0)
+RegistrationTestWithImplicitWait
+    ${implicit_wait}=   Get Selenium Implicit Wait
+    Log To Console   ${implicit_wait}    #виводимо значення затримки селеніума на екран (дефолтно значення буде 0)
 #    Set Selenium Speed  1
     Open Browser    ${url}  ${browser}
+
+    #так визначається імплісіт вейт і буде діяти для кожної команди внизу
+    Set Selenium Implicit Wait  10seconds  #задали очікування в 10 секунд. Якщо елемент не з'явиться на екрані протягом
+    #10 секунд то отримаєм приблизно такий нотіфікайшн Text 'Реєст7рація на майданчику' did not appear in 10 seconds.
+    #Імплісіт вейт це найбільш протуктивний кейворд для використання
+
 
     ${selenium_timeout}=    Get Selenium Speed
     Log To Console  ${selenium_timeout}
@@ -31,6 +37,7 @@ RegistrationTest
     Input Password  id:user-password    ${pass}
     Input Password  id:user-confirmpassword    ${pass}
     Select From List By Index   companies-registrationcountryname  1
+
 
 
 
