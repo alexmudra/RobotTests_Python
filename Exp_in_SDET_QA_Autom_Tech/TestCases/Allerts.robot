@@ -17,4 +17,7 @@ HandlingAllerts
     #handle alert    accept
 
     #для того щоб відмінити алерт-вікно(ніби клікнути ок) треба використати наступний кейворд
-    handle alert    dismiss
+    #handle alert    dismiss
+
+    #для того щоб залишити алерт-вікно(ніби клікнути ок) треба використати наступний кейворд
+    handle alert    leave
