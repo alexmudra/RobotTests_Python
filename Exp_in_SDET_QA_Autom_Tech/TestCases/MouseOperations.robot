@@ -30,6 +30,10 @@ MauseActionsTC
 
     #drug and drop action
     go to   http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+    Maximize Browser Window
+    #спочатку берем елемент із sourse element(це id:box6)  в таргет елемент(це id:box105 )
+    drag and drop   id:box6     id:box105
+    sleep  5
 
 
 
