@@ -25,6 +25,11 @@ TableValidations
     sleep  2
     close browser
 
+GetTextValueInTable
+    open browser    http://testautomationpractice.blogspot.com/   ${browser}
+    Maximize Browser Window
+    ${get_text_data}=   get text  xpath://table[@name='BookTable']/tbody/tr[5]/td[1]   #вивели дані через get text
+    log to console  "Це інфо із колонки:" ${get_text_data}
 
 
 
