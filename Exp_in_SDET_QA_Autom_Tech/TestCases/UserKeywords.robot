@@ -17,15 +17,20 @@ UserKeywordTC
     LaunchBrowserChrome_with_no_argiments   #використовуємо кейворб і НЕ передаємо ніяких параметрів/аргументів
     input text  xpath://input[@id='username']  ${login}
     input password  xpath://input[@id='password']   ${psw}
+    close browser
+
 
     LaunchBrowserChrome_with_two_arguments  ${url}  ${browser}
     input text  xpath://input[@id='username']  ${login}
     input password  xpath://input[@id='password']   ${psw}
+    close browser
+
 
     ${page_title}=   LaunchBrowserChrome_with_two_arguments_and_retunr_the_value  ${url}  ${browser}
     log to console  ${page_title}
     input text  xpath://input[@id='username']  ${login}
     input password  xpath://input[@id='password']   ${psw}
+    close browser
 
 
 
