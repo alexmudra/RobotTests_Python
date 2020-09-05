@@ -12,26 +12,27 @@ ${LOGIN URL}    http://practice.automationtesting.in/my-account/
 ${BROWSER}      chrome
 
 *** Keywords ***
-Open Browser
+Open my Browser
     open browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
 
 
 Close Browsers
-    close all browsers
+    Close All Browsers
+
 
 
 Open Login Page
     go to   ${LOGIN URL}
 
 
-Input USer Name
+Input User Name
     [Arguments]     ${username}
     input text  id:username
 
 
 Input Password
-    [Arguments]     ${pwd}
+    [Arguments]     ${password}
     input text      id:password     ${password}
 
 

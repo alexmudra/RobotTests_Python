@@ -8,12 +8,12 @@ Suite Teardown  Close Browsers      #цей кейворт запуститьс�
 Test Template   Invalid Login   #цей кейворд буде запускатися кожного разу для кожного тесткейса
 
 
-*** Test Cases ***                           username                            password
-Right User Empty Pwd        test@test17.com     ${EMPTY}
-Right User Invalid Pwd     test@test17.com     sdfdsf
-Wrong User Right Pwd     testdslkf     test@test17.com
-Wrong User Empty Pwd     testdslkf     ${EMPTY}
-Wrong User Wrong Pwd     testdslkf     ksdjfkj
+*** Test Cases ***      username  password
+Right User Empty Pass     test@test17.com     ${EMPTY}
+Right User Invalid Pwd       test@test17.com      sdfdsf
+Wrong User Right Pwd         testdslkf            test@test17.com
+Wrong User Empty Pwd         testdslkf            ${EMPTY}
+Wrong User Wrong Pwd         testdslkf            ksdjfkj
 
 
 
