@@ -5,7 +5,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../Resources/login_resourses.robot
-Library    DataDriver   C:\Users\alex\PycharmProjects\RobotTests_Python\Exp_in_SDET_QA_Autom_Tech\TestData\LoginData.csv
+Library    DataDriver   ../TestData/LoginData.csv
 
 Suite Setup      Open My Browser  #відкриє браузер лише 1 раз перед запусками тесткейсів
 Suite Teardown      Close Browsers      #цей кейворд буде виконоуватись після того як ТК закінчаться
@@ -13,7 +13,7 @@ Test Template       Invalid Login
 
 
 *** Test Cases ***
-TestLoginWithExelFile           ${username} and ${password}
+TestLoginWithCVSFile           ${username}      ${password}
 
 
 

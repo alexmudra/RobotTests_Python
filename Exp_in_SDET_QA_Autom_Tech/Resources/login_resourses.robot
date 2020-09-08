@@ -21,7 +21,6 @@ Close Browsers
     Close All Browsers
 
 
-
 Open Login Page
     go to   ${LOGIN URL}
 
