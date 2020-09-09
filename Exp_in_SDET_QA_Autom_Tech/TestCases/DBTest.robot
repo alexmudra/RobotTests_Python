@@ -45,5 +45,22 @@ Check Alex record in DB present
     Check If Exists In Database     select id from mydb.person where first_name="Alex";
 
 
+    #перевіримо чи НЕМАЄ записаного велью в бд
+Check Alex458 record in DB isn't present
+    Check If Not Exists In Database     select id from mydb.person where first_name="Alex458";
+
+
+    #перевіримо чи взагалі є запис в таблиці бази даних
+Check Person Table exists in mydb database
+    Table Must Exist    person   #якщо таблиця є в бд, то буде повернене тру==PASS
+
+
+    #перевіримо чи є взагалі рядок в таблиці бд
+Verify Row Count Is Zero
+    Row Count Is 0     SELECT * FROM mydb.person WHEWRE first_name = "jskf";  #поверне PASS бо в таблиці немає запису із first_name = "jskf"
+
+    #чи буде дорівнювати значення
+Row Count Is Equal To Some Value
+    Row Count Is Equal To X  SELECT * FROM mydb.person WHEWRE first_name = "jskf";  1    #порівняли що в таблиці є 1 рядок
 
 
