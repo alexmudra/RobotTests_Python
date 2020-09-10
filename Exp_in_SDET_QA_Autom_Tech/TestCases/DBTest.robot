@@ -2,8 +2,9 @@
 #офсайт лібри для роботи із дб https://franz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html
 
 *** Settings ***
-Library  DatebaseLibrary
-Library  OperatingSystem
+Library     DatabaseLibrary
+Library     OperatingSystem
+Library     pymysql
 
 #виконається тільки 1 раз перед запуском Тк - підконектитись до MySQL + обявимо декілька перемінних/аргументів
 Suite Setup         Connect To Database     pymysql     ${DBName}   ${DBUser}   ${DBPAss}   ${DBHost}   ${DBPort}
@@ -62,5 +63,9 @@ Verify Row Count Is Zero
     #чи буде дорівнювати значення
 Row Count Is Equal To Some Value
     Row Count Is Equal To X  SELECT * FROM mydb.person WHEWRE first_name = "jskf";  1    #порівняли що в таблиці є 1 рядок
+
+
+Verify Row Count is Greater than Some Value
+    row count is great than x
 
 
