@@ -2,7 +2,9 @@
 #Part 23- Page Object Model (POM) Pattern in Robot Framework | Selenium with Python
 *** Settings ***
 Library      SeleniumLibrary
-Variables    ../PageObjects/Locators.py
+Variables     ../PageObjects/locators.py  #Variables вказуємо коли ресурс в пайтон файлі
+
+*** Keywords ***
 
 Open My Browser
     [Arguments]   ${siteUrl}     ${Browser}
@@ -21,9 +23,8 @@ Enter My Password
 Click SingIn Btn
     click button    ${btn_signIn}
 
-
 Verify Succesfull Login
-    Page Should Contain Textfield      Кабінет користувача
+    Page Should Contain Element     ${verify_after_auth}
 
 Close my browsers
     close all browsers
