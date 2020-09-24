@@ -8,9 +8,12 @@ txt_login_userName = "xpath://input[@id='loginform-username']"
 txt_login_password = "xpath://input[@id='loginform-password']"
 btn_signIn = "xpath://button[@name='login-button']"
 verify_after_auth = "xpath://div[@class='container']//h1"
-register_like = "xpath://select[@id='companies-is_seller']"    #select element
-organizer_type = "xpath://select[@id='companies-customer_type']"    #select element
-enter_loginname = "xpath://input[@id='user-username']"
+
+#Registration Page Elements
+click_registration_bnt = "xpath://li[@class='item-register']//a"
+register_like="xpath://select[@id='companies-is_seller']"    #select element
+organizer_type="xpath://select[@id='companies-customer_type']"    #select element
+enter_loginname="xpath://input[@id='user-username']"
 enter_pass_first = "xpath://input[@id='user-password']"
 confirm_pass = "xpath://input[@id='user-confirmpassword']"
 select_country = "xpath://select[@id='companies-registrationcountryname']"
@@ -28,7 +31,7 @@ input_bank_identifier_bank_acc = "xpath://input[@id='companies-bank_account']"
 input_bank_identifier_tranzit = "xpath://input[@id='companies-transit_account']"
 input_bank_name = "xpath://input[@id='companies-bank_branch']"
 
-is_payer_vat_radiobutton = "xpath://div[25]//div[1]//div[1]//div[2]//div[1]//label[2]//input[1]"   #ні
+is_vat_payer = "xpath://div[25]//div[1]//div[1]//div[2]//div[1]//label[2]//input[1]"   #ні
 
 input_company_fio = "xpath://input[@id='companies-fio']"
 input_company_position = "xpath://input[@id='companies-userposition']"
@@ -45,8 +48,5 @@ check_radio_userinfo4 = "xpath://input[@id='user-subscribe_status']"
 
 
 submit_button = "xpath://button[@id='btn-submitform']"      #зареєструватись
-
-
-#Registration Page Elements
 
 
