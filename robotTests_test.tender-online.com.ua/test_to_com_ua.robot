@@ -6,10 +6,14 @@ Library  dzo_service.py
 
 
 *** Variables ***
-${doc_index}                    0
-${homepage}                     https://test.tender-online.com.ua
-${MAIN_URL}                     https://test.tender-online.com.ua/tenders/index
-${BROWSER}                      Chrome
+${doc_index}                                             0
+${BROWSER}                                               Chrome
+${MAIN_URL}                                              https://test.tender-online.com.ua
+${searh_tender_url}                                      https://test.tender-online.com.ua/tenders/index
+${search_catalogues_page}                                https://test.tender-online.com.ua/catalogue/groups
+${searh_actual_tender_url}                               https://test.tender-online.com.ua/tenders/actual
+${select_status_value="active.tendering"}                xpath=//*[@id="status"]/option[2]
+${select_status_active.enquiries}                        xpath=//*[@id="status"]/option[3]
 
 
 *** Keywords ***
