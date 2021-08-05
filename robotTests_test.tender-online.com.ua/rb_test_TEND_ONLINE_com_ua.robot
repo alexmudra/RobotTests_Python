@@ -1,37 +1,68 @@
 #https://www.youtube.com/watch?v=UbYxkUq0Hec&list=PLUDwpEzHYYLsCHiiihnwl3L0xPspL7BPG&index=1
 
+
+#https://github.com/vargatuk/portal/blob/master/Resource/page_object/main.robot
+#https://github.com/vargatuk/portal/tree/master/Resource/tests
+#https://github.com/alexmudra/portal/blob/master/Resource/page_object/common.robot
+#https://github.com/vargatuk/portal/blob/master/Resource/page_object/heder_menu/news_page.robot
+
+
+
 *** Settings ***
 Library  Selenium2Library
 Library  String
 Library  DateTime
-Library  dzo_service.py
 
 
 *** Variables ***
 ${doc_index}                                             0
-${BROWSER}                                               Chrome
+${BROWSER_chrome}                                        Chrome
+${BROWSER_headless}                                      headlesschrome
+
 ${MAIN_URL}                                              https://test.tender-online.com.ua
+${register_page}                                         https://test.tender-online.com.ua/register
 ${searh_tender_url}                                      https://test.tender-online.com.ua/tenders/index
 ${search_catalogues_page}                                https://test.tender-online.com.ua/catalogue/groups
 ${searh_actual_tender_url}                               https://test.tender-online.com.ua/tenders/actual
 ${select_status_value="active.tendering"}                xpath=//*[@id="status"]/option[2]
 ${select_status_active.enquiries}                        xpath=//*[@id="status"]/option[3]
+${msg}  Сторінки ідентичні
 
 
 *** Keywords ***
+#from selenium import webdriver
+#driver = webdriver.Chrome(executable_path='/home/alex/PycharmProjects/WebDrivers_for_Tests/chromedriver')
 
 Start TestCase
-    Open Browser    ${URL}    ${BROWSER}
+    [Arguments]   ${MAIN_URL}   ${BROWSER_headless}
     Maximize Browser Window
 
 
 Finish TestCase
-    Close  Browser
+    [Arguments]     ${BROWSER}
+    close all browsers
+
+*** Test Cases ***
+
+[Documentation] Зайти на сторінку реєстрації
+    #open browser  ${register_page}  ${BROWSER_headless}
+    Start TestCase  ${MAIN_URL}  ${BROWSER_headless}
+    ${location}=    get location  #запише урл актуального браузера
+    log to console  ${location}
 
 
 
+[Documentation] перевірка сторінки реєстрації
+    Перевірка сторінки після переходу  ${register_page}  ${msg}
 
 
+
+*** Keywords ***
+Перевірка сторінки після переходу
+    [Arguments]   ${register_page}  ${msg}
+    ${url}=     get location
+    Should Be True    '${url}' in '${register_page}'    msg=${msg}
+    log to console  ${msg}
 
 
 
