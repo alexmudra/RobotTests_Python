@@ -23,7 +23,7 @@ ${msg_not_identical}                                     Сторінки не �
 
 ${lctr_select_status_value="active.tendering"}            xpath=//*[@id="status"]/option[2]
 ${lctr_select_status_active.enquiries}                    xpath=//*[@id="status"]/option[3]
-${lctr_is_zamovnik}                                       xpath=//*[@id="companies-is_seller"]
+${lctr_is_zamovnik}                                       xpath=//*[@id="companies-is_seller"]/option[1]
 ${lctr_is_uchasnick}                                      xpath=//*[@id="companies-is_seller"]/option[2]
 ${lctr_select_zamovORuchasnick}                           xpath=//*[@id="registration-form"]/div[1]/div[1]/label
 
@@ -41,12 +41,26 @@ Compare url and links
     #log to console  ${msg_identical}
     Capture Page Screenshot
 
+#https://github.com/vargatuk/portal/blob/master/Resource/page_object/main.robot
+Compare zamovnik or not
+    [Arguments]  ${lctr_is_zamovnik}
+    Wait until element is visible   ${lctr_is_zamovnik}     timeout=20
+    ${is_zamovnik}=  get variable value  ${lctr_is_zamovnik}
+    should be true  '${is_zamovnik}' in '${lctr_is_zamovnik}'   msg='значення співпадають'
+    Capture Page Screenshot
+
+
+
+
 
 
 *** Test Cases ***
-Open register page in headless chome
+TC1 Open register page in headless chome
     Open Browser Chrome   ${register_page}  ${BROWSER_headless}
 
-Compare urls
+TC2 Compare current and register urls
     Compare url and links   ${msg_identical}
+
+TC3 Compare value in zamovnik select
+    Compare zamovnik or not  ${lctr_is_zamovnik}
 
