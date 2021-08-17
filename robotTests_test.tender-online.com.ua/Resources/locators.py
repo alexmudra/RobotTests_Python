@@ -10,4 +10,6 @@ lctr_select_status_value_active_tendering="xpath=//*[@id="status"]/option[2]"
 lctr_select_status_active_enquiries="xpath=//*[@id="status"]/option[3]"
 lctr_is_zamovnik="xpath=//*[@id="companies-is_seller"]"
 lctr_is_uchasnick="xpath=//*[@id="companies-is_seller"]/option[2]"
-lctr_select_zamovORuchasnick="xpath=//*[@id="registration-form"]/div[1]/div[1]/label"
+lctr_select_zamovORuchasnick = "xpath=//*[@id="registration-form"]/div[1]/div[1]/label"
+
+submit_button = "xpath://button[@id='btn-submitform']"

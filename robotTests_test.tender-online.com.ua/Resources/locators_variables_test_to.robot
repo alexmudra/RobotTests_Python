@@ -11,6 +11,7 @@ ${searh_actual_tender_url}                               https://test.tender-onl
 
 ${msg_link_is}                                            Лінк має наступний вигляд:
 ${msg_identical}                                         Сторінки ідентичні
+${msg}                                                   Сторінки не ідентичні
 
 #LOCATORS
 

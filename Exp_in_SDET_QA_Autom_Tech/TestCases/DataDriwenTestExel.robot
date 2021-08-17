@@ -3,9 +3,9 @@
 
 
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../Resources/login_resourses.robot
-Library    DataDriver   C:\Users\alex\PycharmProjects\RobotTests_Python\Exp_in_SDET_QA_Autom_Tech\TestData\LoginData.xls    sheet_name=Sheet1
+Library     SeleniumLibrary
+Resource    ../Resources/login_resourses.robot
+Library     DataDriver   C:\Users\alex\PycharmProjects\RobotTests_Python\Exp_in_SDET_QA_Autom_Tech\TestData\LoginData.xls    sheet_name=Sheet1
 
 Suite Setup      Open My Browser  #відкриє браузер лише 1 раз перед запусками тесткейсів
 Suite Teardown      Close Browsers      #цей кейворд буде виконоуватись після того як ТК закінчаться
