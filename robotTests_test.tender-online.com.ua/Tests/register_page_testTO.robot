@@ -1,9 +1,9 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../TestData/ConfigData.robot
 Resource    ../Resources/common.robot
+
 #Resource    C:/Users/alex/PycharmProjects/RobotTests_Python/robotTests_test.tender-online.com.ua/Resources/common.robot
-Resource    ../Resources/locators_variables_test_to.robot
+#Resource    ../Resources/locators_variables_test_to.robot
 
 Suite Setup     common.Start TestCase
 Suite Teardown  common.Finish TestCase

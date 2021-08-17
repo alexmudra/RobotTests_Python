@@ -1,9 +1,9 @@
 #LOCATORS FOR REGISTRATION PAGE
-MAIN_URL=                                             "https://test.tender-online.com.ua"
-register_page=                                         "https://test.tender-online.com.ua/register"
-searh_tender_url=                                      "https://test.tender-online.com.ua/tenders/index"
-search_catalogues_page=                                "https://test.tender-online.com.ua/catalogue/groups"
-searh_actual_tender_url=                               "https://test.tender-online.com.ua/tenders/actual"
+MAIN_URL="https://test.tender-online.com.ua"
+register_page="https://test.tender-online.com.ua/register"
+searh_tender_url="https://test.tender-online.com.ua/tenders/index"
+search_catalogues_page="https://test.tender-online.com.ua/catalogue/groups"
+searh_actual_tender_url="https://test.tender-online.com.ua/tenders/actual"
 
 
 lctr_select_status_value_active_tendering="xpath=//*[@id="status"]/option[2]"
